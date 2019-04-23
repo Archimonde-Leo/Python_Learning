@@ -93,6 +93,21 @@
     - 受保护的：protected
     - 私有的：private
     - public，private，protected都不是关键字
-    -j
+- 判别对象位置
+    - 对象内部
+    - 对象外部
+    - 子类
+- 私有
+    - 私有成员是最高级别封装，只能在当前类或对象中访问
+    - 在成员前添加两个下划线
+    
+            class Person():
+                # name是共有成员
+                name = "yty"
+                # __age是私有成员
+                __age = 18
+    - Python的私有与C++不同，是一种称为name mangling的改名策略，
+    可以使用对象._classname_attributename访问
+            
 
     
