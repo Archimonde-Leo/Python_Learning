@@ -22,9 +22,26 @@
 
 - threading的使用
     - 直接利用threading.Thread生成Thread实例
-        1.t = threading.Thread(target=xxx, args=(xxx,))
-        2.t.start():启动多线程
-        3.t.join():等待多线程执行完成
-        4.案例04
-        5.案例05：加入join()后与案例04比较
-        - 守护线程
+        1. t = threading.Thread(target=xxx, args=(xxx,))
+        2. t.start():启动多线程
+        3. t.join():等待多线程执行完成
+        4. 案例04
+        5. 案例05：加入join()后与案例04比较
+        - 守护线程-daemon
+            - 如果在程序中将子线程设置成守护线程，则子线程会在主线程结束时自动退出
+            - 一般认为，守护线程不重要或不允许脱离主线程独立运行
+            - 守护线程案例能否有效与环境相关
+            - 案例06非守护线程
+            - 案例07守护线程
+        - 线程常用属性
+            - threading.currentThread：返回当前线程变量
+            - threading.enumerate：返回一个包含正在运行的线程的list
+            - threading.activeCount：返回正在运行的线程数量，即len(threading.enumerate)
+            - thr.setName：给线程设置名称
+            - thr.getName：得到线程名称
+    - 直接继承自threading.Thread
+        - 直接继承Thread
+        - 重写run函数
+        - 类实例可以直接运行
+        - 案例09
+        - 案例10 工业常用写法
